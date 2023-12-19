@@ -1,81 +1,81 @@
 # API de Loja em ASP.NET Core
 
-Este projeto È uma API de loja desenvolvida em ASP.NET Core que gerencia trÍs entidades principais: Fornecedor, Contrato e Produto.
+Este projeto √© uma API de loja desenvolvida em ASP.NET Core que gerencia tr√™s entidades principais: Fornecedor, Contrato e Produto. O banco de dados escolhido foi o Firebase.
 
 ## Funcionalidades
 
-- **AutenticaÁ„o com JWT Token:** A API possui um sistema de autenticaÁ„o utilizando JWT Token.
-- **AutenticaÁ„o Necess·ria para OperaÁıes EspecÌficas:** Para deletar um fornecedor, realizar um GET em contratos ou deletar um contrato, È necess·rio estar autenticado.
-- **Cadastro de Usu·rios Mocado:**
-  - **Usu·rio Admin:**
+- **Autentica√ß√£o com JWT Token:** A API possui um sistema de autentica√ß√£o utilizando JWT Token.
+- **Autentica√ß√£o Necess√°ria para Opera√ß√µes Espec√≠ficas:** Para deletar um fornecedor, realizar um GET em contratos ou deletar um contrato, √© necess√°rio estar autenticado.
+- **Cadastro de Usu√°rios Mocado:**
+  - **Usu√°rio Admin:**
     - **ID:** 1
     - **Username:** admin
     - **Senha:** admin
     - **Roles:** manager
-  - **Usu·rio Empregado:**
+  - **Usu√°rio Empregado:**
     - **ID:** 2
     - **Username:** empregado
     - **Senha:** empregado
     - **Roles:** employee
 
-## AutenticaÁ„o na API
+## Autentica√ß√£o na API
 
 - Para se autenticar, utilize o Swagger.
-- O login no Swagger retornar· um token.
-- Para autenticar, v· para a seÁ„o de autenticaÁ„o no Swagger e insira o token obtido anteriormente com a palavra Bearer antes(sem aspas) no campo "Bearer Token". ApÛs isso, ser· possÌvel fazer consultas.
+- O login no Swagger retornar√° um token.
+- Para autenticar, v√° para a se√ß√£o de autentica√ß√£o no Swagger e insira o token obtido anteriormente com a palavra Bearer antes(sem aspas) no campo "Bearer Token". Ap√≥s isso, ser√° poss√≠vel fazer consultas.
 
 ## Endpoints Principais
 
 ### CRUD Fornecedor
 
-- **Criar Fornecedor:** MÈtodo POST `/api/fornecedor`
-- **Atualizar Fornecedor:** MÈtodo PUT `/api/fornecedor`
-- **Deletar Fornecedor:** MÈtodo DELETE `/api/fornecedor/{id}`
-- **Consultar Fornecedores:** MÈtodo GET `/api/fornecedor`
-- **Consultar Fornecedor por ID:** MÈtodo GET `/api/fornecedor/{id}`
-- AutenticaÁ„o necess·ria para deletar, criar e atualizar: Sim
+- **Criar Fornecedor:** M√©todo POST `/api/fornecedor`
+- **Atualizar Fornecedor:** M√©todo PUT `/api/fornecedor`
+- **Deletar Fornecedor:** M√©todo DELETE `/api/fornecedor/{id}`
+- **Consultar Fornecedores:** M√©todo GET `/api/fornecedor`
+- **Consultar Fornecedor por ID:** M√©todo GET `/api/fornecedor/{id}`
+- Autentica√ß√£o necess√°ria para deletar, criar e atualizar: Sim
 
 ### CRUD Contrato
 
-- **Criar Contrato:** MÈtodo POST `/api/contrato`
-- **Atualizar Contrato:** MÈtodo PUT `/api/contrato`
-- **Deletar Contrato:** MÈtodo DELETE `/api/contrato/{id}`
-- **Consultar Contratos:** MÈtodo GET `/api/contrato`
-- **Consultar Contrato por ID:** MÈtodo GET `/api/contrato/{id}`
-- AutenticaÁ„o necess·ria para deletar, criar e atualizar: Sim
+- **Criar Contrato:** M√©todo POST `/api/contrato`
+- **Atualizar Contrato:** M√©todo PUT `/api/contrato`
+- **Deletar Contrato:** M√©todo DELETE `/api/contrato/{id}`
+- **Consultar Contratos:** M√©todo GET `/api/contrato`
+- **Consultar Contrato por ID:** M√©todo GET `/api/contrato/{id}`
+- Autentica√ß√£o necess√°ria para deletar, criar e atualizar: Sim
 
 ### CRUD Produto
 
-- **Criar Produto:** MÈtodo POST `/api/produto`
-- **Atualizar Produto:** MÈtodo PUT `/api/produto`
-- **Deletar Produto:** MÈtodo DELETE `/api/produto/{id}`
-- **Consultar Produtos:** MÈtodo GET `/api/produto`
-- **Consultar Produto por ID:** MÈtodo GET `/api/produto/{id}`
-- AutenticaÁ„o necess·ria para deletar, criar e atualizar: Sim
+- **Criar Produto:** M√©todo POST `/api/produto`
+- **Atualizar Produto:** M√©todo PUT `/api/produto`
+- **Deletar Produto:** M√©todo DELETE `/api/produto/{id}`
+- **Consultar Produtos:** M√©todo GET `/api/produto`
+- **Consultar Produto por ID:** M√©todo GET `/api/produto/{id}`
+- Autentica√ß√£o necess√°ria para deletar, criar e atualizar: Sim
 
-## ConfiguraÁ„o do Banco de Dados
+## Configura√ß√£o do Banco de Dados
 
-- O sistema È feito em Firestore. Para executar a soluÁ„o, siga os passos abaixo:
+- O sistema √© feito em Firestore. Para executar a solu√ß√£o, siga os passos abaixo:
   1. Crie o banco de dados no Firestore (gratuito).
-  2. Baixe o arquivo de configuraÁ„o gerado pelo Firestore.
-  3. Coloque o arquivo de configuraÁ„o na pasta raiz do projeto.
-  4. No diretÛrio "Utils", acesse o arquivo "Settings.cs".
-  5. Para a vari·vel "arquivoApikey", defina o nome do arquivo gerado pelo Firestore (algo como db-projeto-797d7-firebase-adminsdk-31mk9-bba77c5048).
-  6. Para a vari·vel "projectId", defina o nome do projeto criado no Firestore (algo como db-projeto-797d7).
+  2. Baixe o arquivo de configura√ß√£o gerado pelo Firestore.
+  3. Coloque o arquivo de configura√ß√£o na pasta raiz do projeto.
+  4. No diret√≥rio "Utils", acesse o arquivo "Settings.cs".
+  5. Para a vari√°vel "arquivoApikey", defina o nome do arquivo gerado pelo Firestore (algo como db-projeto-797d7-firebase-adminsdk-31mk9-bba77c5048).
+  6. Para a vari√°vel "projectId", defina o nome do projeto criado no Firestore (algo como db-projeto-797d7).
 
 ## Como Executar o Projeto
 
-- Clone este repositÛrio.
+- Clone este reposit√≥rio.
 - Abra o projeto em um ambiente de desenvolvimento (Visual Studio, Visual Studio Code, etc.).
-- Execute a aplicaÁ„o.
+- Execute a aplica√ß√£o.
 
-## DependÍncias
+## Depend√™ncias
 
 - ASP.NET Core
 - JWT Authentication
 - Firestore
 - Swagger
 
-## ContribuiÁ„o
+## Contribui√ß√£o
 
-ContribuiÁıes s„o bem-vindas! Sinta-se ‡ vontade para propor melhorias, novas funcionalidades ou correÁıes de bugs.
+Contribui√ß√µes s√£o bem-vindas! Sinta-se √† vontade para propor melhorias, novas funcionalidades ou corre√ß√µes de bugs.
